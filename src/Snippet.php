@@ -3,7 +3,7 @@ namespace ddTypograph;
 
 class Snippet extends \DDTools\Snippet {
 	protected
-		$version = '2.6.0',
+		$version = '2.6.1',
 		
 		$params = [
 			//Defaults
