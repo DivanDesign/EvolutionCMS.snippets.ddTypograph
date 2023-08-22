@@ -168,6 +168,7 @@ Nothing you can sing that can’t be&nbsp;sung</p>
 * [Home page](https://code.divandesign.biz/modx/ddtypograph)
 * [Telegram chat](https://t.me/dd_code)
 * [Packagist](https://packagist.org/packages/dd/evolutioncms-snippets-ddtypograph)
+* [GitHub](https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph)
 
 
 <link rel="stylesheet" type="text/css" href="https://raw.githack.com/DivanDesign/CSS.ddMarkdown/master/style.min.css" />
