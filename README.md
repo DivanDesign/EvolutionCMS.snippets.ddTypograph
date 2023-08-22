@@ -7,7 +7,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ## Requires
 
 * PHP >= 5.6
-* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.biz/modx/ddtools) >= 0.48.1
+* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.ru/modx/ddtools) >= 0.48.1
 * [PHP.libraries.EMT](http://mdash.ru) 3.5 (contains in archive)
 
 
@@ -165,7 +165,7 @@ Nothing you can sing that can’t be&nbsp;sung</p>
 
 ## Links
 
-* [Home page](https://code.divandesign.biz/modx/ddtypograph)
+* [Home page](https://code.divandesign.ru/modx/ddtypograph)
 * [Telegram chat](https://t.me/dd_code)
 * [Packagist](https://packagist.org/packages/dd/evolutioncms-snippets-ddtypograph)
 * [GitHub](https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph)

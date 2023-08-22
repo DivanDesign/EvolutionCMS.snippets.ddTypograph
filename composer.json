@@ -21,19 +21,13 @@
 		"text correction",
 		"text typography"
 	],
-	"homepage": "https://code.divandesign.biz/modx/ddtypograph",
+	"homepage": "https://code.divandesign.ru/modx/ddtypograph",
 	"authors": [
-		{
-			"name": "DD Group",
-			"email": "code@DivanDesign.biz",
-			"homepage": "https://code.divandesign.biz",
-			"role": "Owner"
-		},
 		{
 			"name": "Ilyas Ronef",
 			"email": "ilyas@DivanDesign.ru",
 			"homepage": "https://ronef.ru",
-			"role": "Developer"
+			"role": "Owner"
 		}
 	],
 	"require": {

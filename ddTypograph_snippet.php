@@ -5,9 +5,9 @@
  * 
  * @see README.md
  * 
- * @link https://code.divandesign.biz/modx/ddtypograph
+ * @link https://code.divandesign.ru/modx/ddtypograph
  * 
- * @copyright 2010–2021 DD Group {@link https://DivanDesign.biz }
+ * @copyright 2010–2021 Ronef {@link https://Ronef.ru }
  */
 
 //Include (MODX)EvolutionCMS.libraries.ddTools

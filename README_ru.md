@@ -6,7 +6,7 @@
 ## Использует
 
 * PHP >= 5.6
-* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.biz/modx/ddtools) >= 0.48.1
+* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.ru/modx/ddtools) >= 0.48.1
 * [PHP.libraries.EMT](http://mdash.ru) 3.5 (содержится в архиве)
 
 
