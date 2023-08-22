@@ -1,7 +1,17 @@
 # (MODX)EvolutionCMS.snippets.ddTypograph changelog
 
 
-## Version 2.5 (2021-03-29)
+## Версия 2.6 (2023-08-22)
+* \+ Параметры → `optAlign_useClasses`: Новый параметр. Позволяет использовать CSS-классы вместо inline-стилей для оптического выравнивания (`<span class="oa_comma_b">` вместо `<span style="margin-right:-0.2em;">`).
+* \+ README:
+	* \+ Установка → Используя (MODX)EvolutionCMS.libraries.ddInstaller.
+	* \+ Ссылки → GitHub.
+* \+ Composer.json:
+	* \+ `support`.
+	* \+ `autoload`.
+
+
+## Версия 2.5 (2021-03-29)
 * \* Внимание! Требуется PHP >= 5.6.
 * \* Внимание! Требуется (MODX)EvolutionCMS.libraries.ddTools >= 0.48.1.
 * \+ Запустить сниппет без DB и eval можно через `\DDTools\Snippet::runSnippet` (см. примеры в README).

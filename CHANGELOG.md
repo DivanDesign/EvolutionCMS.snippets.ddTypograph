@@ -1,6 +1,16 @@
 # (MODX)EvolutionCMS.snippets.ddTypograph changelog
 
 
+## Version 2.6 (2023-08-22)
+* \+ Parameters → `optAlign_useClasses`: The new parameter. Allows to use CSS classes instead of inline styles for optical alignment (`<span class="oa_comma_b">` instead of `<span style="margin-right:-0.2em;">`).
+* \+ README:
+	* \+ Installation → Using (MODX)EvolutionCMS.libraries.ddInstaller.
+	* \+ Links → GitHub.
+* \+ Composer.json:
+	* \+ `support`.
+	* \+ `autoload`.
+
+
 ## Version 2.5 (2021-03-29)
 * \* Attention! PHP >= 5.6 is required.
 * \* Attention! (MODX)EvolutionCMS.libraries.ddTools >= 0.48.1 is required.
