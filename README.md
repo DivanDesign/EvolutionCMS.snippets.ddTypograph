@@ -11,13 +11,10 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 * [PHP.libraries.EMT](http://mdash.ru) 3.5 (contains in archive)
 
 
-## Documentation
+## Installation
 
 
-### Installation
-
-
-#### 1. Elements → Snippets: Create a new snippet with the following data
+### 1. Elements → Snippets: Create a new snippet with the following data
 
 1. Snippet name: `ddTypograph`.
 2. Description: `<b>2.5</b> Snippet for text typography. The snippet doesn’t use third-party services, also it sends no requests. In other words, everything is performed on your server.`.
@@ -26,13 +23,13 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 5. Snippet code (php): Insert content of the `ddTypograph_snippet.php` file from the archive.
 
 
-#### 2. Elements → Manage Files
+### 2. Elements → Manage Files
 
 1. Create a new folder `assets/snippets/ddTypograph/`.
 2. Extract the archive to the folder (except `ddTypograph_snippet.php`).
 
 
-### Parameters description
+## Parameters description
 
 * `text`
 	* Desctription: Text to correct.
@@ -99,17 +96,17 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 	* Default value: `'notg,code'`
 
 
-### Examples
+## Examples
 
 
-#### Typography the content
+### Typography the content
 
 ```
 [[ddTypograph? &text=`[*content*]`]]
 ```
 
 
-#### Typography text with auto paragraphs, links & emails
+### Typography text with auto paragraphs, links & emails
 
 ```
 [[ddTypograph?
@@ -120,7 +117,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ```
 
 
-#### Typography text with auto optical margin alignment (hanging quotes & etc)
+### Typography text with auto optical margin alignment (hanging quotes & etc)
 
 ```
 [[ddTypograph?
@@ -130,7 +127,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ```
 
 
-#### Turn off typography for a text fragment (the `<notg></notg>` tag)
+### Turn off typography for a text fragment (the `<notg></notg>` tag)
 
 ```html
 [[ddTypograph?
@@ -139,7 +136,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ```
 
 
-#### Run the snippet through `\DDTools\Snippet::runSnippet` without DB and eval
+### Run the snippet through `\DDTools\Snippet::runSnippet` without DB and eval
 
 ```php
 \DDTools\Snippet::runSnippet([
