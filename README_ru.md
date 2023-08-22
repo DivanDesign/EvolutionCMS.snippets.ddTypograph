@@ -13,7 +13,32 @@
 ## Установка
 
 
-### 1. Элементы → Сниппеты: Создайте новый сниппет со следующими параметрами
+### Используя [(MODX)EvolutionCMS.libraries.ddInstaller](https://github.com/DivanDesign/EvolutionCMS.libraries.ddInstaller)
+
+Просто вызовите следующий код в своих исходинках или модуле [Console](https://github.com/vanchelo/MODX-Evolution-Ajax-Console):
+
+```php
+//Подключение (MODX)EvolutionCMS.libraries.ddInstaller
+require_once(
+	$modx->getConfig('base_path') .
+	'assets/libs/ddInstaller/require.php'
+);
+
+//Установка (MODX)EvolutionCMS.snippets.ddTypograph
+\DDInstaller::install([
+	'url' => 'https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph',
+	'type' => 'snippet'
+]);
+```
+
+* Если `ddTypograph` отсутствует на вашем сайте, `ddInstaller` просто установит его.
+* Если `ddTypograph` уже есть на вашем сайте, `ddInstaller` проверит его версию и обновит, если нужно. 
+
+
+### Вручную
+
+
+#### 1. Элементы → Сниппеты: Создайте новый сниппет со следующими параметрами
 
 1. Название сниппета: `ddTypograph`.
 2. Описание: `<b>2.5</b> Сниппет типографирует текст. Не использует сторонних сервисов, не отправляет никаких запросов, всё делается прямо у вас на сервере.`.
@@ -22,7 +47,7 @@
 5. Код сниппета (php): Вставьте содержимое файла `ddTypograph_snippet.php` из архива.
 
 
-### 2. Элементы → Управление файлами
+#### 2. Элементы → Управление файлами
 
 1. Создайте новую папку `assets/snippets/ddTypograph/`.
 2. Извлеките содержимое архива в неё (кроме файла `ddTypograph_snippet.php`).
