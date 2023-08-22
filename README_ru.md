@@ -45,6 +45,24 @@
 		* `1`
 	* Значение по умолчанию: `0`
 	
+* `optAlign_useClasses`
+	* Описание: Использовать CSS-классы вместо inline-стилей для оптического выравнивания (`<span class="oa_comma_b">` вместо `<span style="margin-right:-0.2em;">`).
+		Если параметр включен, не забудьте прописать на своём сайте следующие правила CSS:  
+		```css
+		.oa_obracket_sp_s {margin-right:0.3em;}
+		.oa_obracket_sp_b {margin-left:-0.3em;}
+		.oa_obracket_nl_b {margin-left:-0.3em;}
+		.oa_comma_b {margin-right:-0.2em;}
+		.oa_comma_e {margin-left:0.2em;}
+		.oa_oquote_nl {margin-left:-0.44em;}
+		.oa_oqoute_sp_s {margin-right:0.44em;}
+		.oa_oqoute_sp_q {margin-left:-0.44em;}
+		```
+	* Допустимые значения:
+		* `0`
+		* `1`
+	* Значение по умолчанию: `0`
+	
 * `text_paragraphs`
 	* Описание: Простановка параграфов и переносов строк.
 	* Допустимые значения:

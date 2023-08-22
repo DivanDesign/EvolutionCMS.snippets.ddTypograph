@@ -46,6 +46,24 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 		* `1`
 	* Default value: `0`
 	
+* `optAlign_useClasses`
+	* Desctription: Use CSS classes instead of inline styles for optical alignment (`<span class="oa_comma_b">` instead of `<span style="margin-right:-0.2em;">`).  
+		If the parameter is enabled, don't forget to specify the following CSS rules on your site:
+		```css
+		.oa_obracket_sp_s {margin-right:0.3em;}
+		.oa_obracket_sp_b {margin-left:-0.3em;}
+		.oa_obracket_nl_b {margin-left:-0.3em;}
+		.oa_comma_b {margin-right:-0.2em;}
+		.oa_comma_e {margin-left:0.2em;}
+		.oa_oquote_nl {margin-left:-0.44em;}
+		.oa_oqoute_sp_s {margin-right:0.44em;}
+		.oa_oqoute_sp_q {margin-left:-0.44em;}
+		```
+	* Valid values:
+		* `0`
+		* `1`
+	* Default value: `0`
+	
 * `text_paragraphs`
 	* Desctription: Section signs and line breaks insertion.
 	* Valid values:
