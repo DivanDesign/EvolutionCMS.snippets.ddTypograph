@@ -169,4 +169,4 @@ Nothing you can sing that can’t be&nbsp;sung</p>
 * [Packagist](https://packagist.org/packages/dd/evolutioncms-snippets-ddtypograph)
 
 
-<link rel="stylesheet" type="text/css" href="https://DivanDesign.ru/assets/files/ddMarkdown.css" />
+<link rel="stylesheet" type="text/css" href="https://raw.githack.com/DivanDesign/CSS.ddMarkdown/master/style.min.css" />
