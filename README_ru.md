@@ -6,20 +6,42 @@
 ## Использует
 
 * PHP >= 5.6
-* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.biz/modx/ddtools) >= 0.48.1
+* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.ru/modx/ddtools) >= 0.48.1
 * [PHP.libraries.EMT](http://mdash.ru) 3.5 (содержится в архиве)
 
 
-## Документация
+## Установка
 
 
-### Установка
+### Используя [(MODX)EvolutionCMS.libraries.ddInstaller](https://github.com/DivanDesign/EvolutionCMS.libraries.ddInstaller)
+
+Просто вызовите следующий код в своих исходинках или модуле [Console](https://github.com/vanchelo/MODX-Evolution-Ajax-Console):
+
+```php
+//Подключение (MODX)EvolutionCMS.libraries.ddInstaller
+require_once(
+	$modx->getConfig('base_path') .
+	'assets/libs/ddInstaller/require.php'
+);
+
+//Установка (MODX)EvolutionCMS.snippets.ddTypograph
+\DDInstaller::install([
+	'url' => 'https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph',
+	'type' => 'snippet'
+]);
+```
+
+* Если `ddTypograph` отсутствует на вашем сайте, `ddInstaller` просто установит его.
+* Если `ddTypograph` уже есть на вашем сайте, `ddInstaller` проверит его версию и обновит, если нужно. 
+
+
+### Вручную
 
 
 #### 1. Элементы → Сниппеты: Создайте новый сниппет со следующими параметрами
 
 1. Название сниппета: `ddTypograph`.
-2. Описание: `<b>2.5</b> Сниппет типографирует текст. Не использует сторонних сервисов, не отправляет никаких запросов, всё делается прямо у вас на сервере.`.
+2. Описание: `<b>2.6</b> Сниппет типографирует текст. Не использует сторонних сервисов, не отправляет никаких запросов, всё делается прямо у вас на сервере.`.
 3. Категория: `Core`.
 4. Анализировать DocBlock: `no`.
 5. Код сниппета (php): Вставьте содержимое файла `ddTypograph_snippet.php` из архива.
@@ -31,7 +53,7 @@
 2. Извлеките содержимое архива в неё (кроме файла `ddTypograph_snippet.php`).
 
 
-### Описание параметров
+## Описание параметров
 
 * `text`
 	* Описание: Текст, который нужно типографировать.
@@ -40,6 +62,24 @@
 	
 * `optAlign`
 	* Описание: Оптическое выравнивание (висячая пунктуация).
+	* Допустимые значения:
+		* `0`
+		* `1`
+	* Значение по умолчанию: `0`
+	
+* `optAlign_useClasses`
+	* Описание: Использовать CSS-классы вместо inline-стилей для оптического выравнивания (`<span class="oa_comma_b">` вместо `<span style="margin-right:-0.2em;">`).
+		Если параметр включен, не забудьте прописать на своём сайте следующие правила CSS:  
+		```css
+		.oa_obracket_sp_s {margin-right:0.3em;}
+		.oa_obracket_sp_b {margin-left:-0.3em;}
+		.oa_obracket_nl_b {margin-left:-0.3em;}
+		.oa_comma_b {margin-right:-0.2em;}
+		.oa_comma_e {margin-left:0.2em;}
+		.oa_oquote_nl {margin-left:-0.44em;}
+		.oa_oqoute_sp_s {margin-right:0.44em;}
+		.oa_oqoute_sp_q {margin-left:-0.44em;}
+		```
 	* Допустимые значения:
 		* `0`
 		* `1`
@@ -80,17 +120,17 @@
 	* Значение по умолчанию: `'notg,code'`
 
 
-### Примеры
+## Примеры
 
 
-#### Типографирование контента перед выводом
+### Типографирование контента перед выводом
 
 ```
 [[ddTypograph? &text=`[*content*]`]]
 ```
 
 
-#### Типографирование текста с автоматической расстановкой абзацев, ссылок и адресов email
+### Типографирование текста с автоматической расстановкой абзацев, ссылок и адресов email
 
 ```
 [[ddTypograph?
@@ -101,7 +141,7 @@
 ```
 
 
-#### Типографирование текста с автоматическим оптическим выравниванием (висячие кавычки и пр.)
+### Типографирование текста с автоматическим оптическим выравниванием (висячие кавычки и пр.)
 
 ```
 [[ddTypograph?
@@ -111,7 +151,7 @@
 ```
 
 
-#### Отключить работу типографа для фрагмента текста (тег `<notg></notg>`)
+### Отключить работу типографа для фрагмента текста (тег `<notg></notg>`)
 
 ```html
 [[ddTypograph?
@@ -120,7 +160,7 @@
 ```
 
 
-#### Запустить сниппет без DB и eval через `\DDTools\Snippet::runSnippet`
+### Запустить сниппет без DB и eval через `\DDTools\Snippet::runSnippet`
 
 ```php
 \DDTools\Snippet::runSnippet([
@@ -152,6 +192,7 @@ Nothing you can sing that can’t be&nbsp;sung</p>
 * [Home page](https://code.divandesign.ru/modx/ddtypograph)
 * [Telegram chat](https://t.me/dd_code)
 * [Packagist](https://packagist.org/packages/dd/evolutioncms-snippets-ddtypograph)
+* [GitHub](https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph)
 
 
-<link rel="stylesheet" type="text/css" href="https://DivanDesign.ru/assets/files/ddMarkdown.css" />
+<link rel="stylesheet" type="text/css" href="https://raw.githack.com/DivanDesign/CSS.ddMarkdown/master/style.min.css" />

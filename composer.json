@@ -1,7 +1,7 @@
 {
 	"name": "dd/evolutioncms-snippets-ddtypograph",
 	"type": "modxevo-snippet",
-	"version": "2.5.0",
+	"version": "2.6.0",
 	"description": "Snippet for text typography. The snippet doesn't use third-party services, also it sends no requests. In other words, everything is performed on your server.",
 	"keywords": [
 		"modx",
@@ -21,23 +21,25 @@
 		"text correction",
 		"text typography"
 	],
-	"homepage": "https://code.divandesign.biz/modx/ddtypograph",
+	"homepage": "https://code.divandesign.ru/modx/ddtypograph",
+	"support": {
+		"chat": "https://t.me/dd_code"
+	},
 	"authors": [
-		{
-			"name": "DD Group",
-			"email": "code@DivanDesign.biz",
-			"homepage": "https://code.divandesign.biz",
-			"role": "Owner"
-		},
 		{
 			"name": "Ilyas Ronef",
 			"email": "ilyas@DivanDesign.ru",
 			"homepage": "https://ronef.ru",
-			"role": "Developer"
+			"role": "Owner"
 		}
 	],
 	"require": {
 		"php": ">=5.6.0",
 		"dd/evolutioncms-libraries-ddtools": ">=0.48.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"ddTypograph\\": "src/"
+		}
 	}
 }

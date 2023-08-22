@@ -3,12 +3,13 @@ namespace ddTypograph;
 
 class Snippet extends \DDTools\Snippet {
 	protected
-		$version = '2.5.0',
+		$version = '2.6.0',
 		
 		$params = [
 			//Defaults
 			'text' => '',
 			'optAlign' => false,
+			'optAlign_useClasses' => false,
 			'text_paragraphs' => false,
 			'text_autoLinks' => false,
 			'etc_unicodeConvert' => true,
@@ -18,6 +19,7 @@ class Snippet extends \DDTools\Snippet {
 		
 		$paramsTypes = [
 			'optAlign' => 'boolean',
+			'optAlign_useClasses' => 'boolean',
 			'text_paragraphs' => 'boolean',
 			'text_autoLinks' => 'boolean',
 			'etc_unicodeConvert' => 'boolean',
@@ -52,7 +54,7 @@ class Snippet extends \DDTools\Snippet {
 	
 	/**
 	 * run
-	 * @version 1.0 (2021-03-29)
+	 * @version 1.1 (2023-08-22)
 	 * 
 	 * @return {string}
 	 */
@@ -290,7 +292,11 @@ class Snippet extends \DDTools\Snippet {
 				//Оптическое выравнивание кавычки
 				'OptAlign.oa_oquote_extra' => $this->params->optAlign,
 				//Inline стили или CSS-классы
-				'OptAlign.layout' => 'style',
+				'OptAlign.layout' =>
+					$this->params->optAlign_useClasses ?
+					'class' :
+					'style'
+				,
 				
 				//Простановка параграфов
 				'Text.paragraphs' => $this->params->text_paragraphs,

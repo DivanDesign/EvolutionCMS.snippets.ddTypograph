@@ -7,20 +7,42 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ## Requires
 
 * PHP >= 5.6
-* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.biz/modx/ddtools) >= 0.48.1
+* [(MODX)EvolutionCMS.libraries.ddTools](https://code.divandesign.ru/modx/ddtools) >= 0.48.1
 * [PHP.libraries.EMT](http://mdash.ru) 3.5 (contains in archive)
 
 
-## Documentation
+## Installation
 
 
-### Installation
+### Using [(MODX)EvolutionCMS.libraries.ddInstaller](https://github.com/DivanDesign/EvolutionCMS.libraries.ddInstaller)
+
+Just run the following PHP code in your sources or [Console](https://github.com/vanchelo/MODX-Evolution-Ajax-Console):
+
+```php
+//Include (MODX)EvolutionCMS.libraries.ddInstaller
+require_once(
+	$modx->getConfig('base_path') .
+	'assets/libs/ddInstaller/require.php'
+);
+
+//Install (MODX)EvolutionCMS.snippets.ddTypograph
+\DDInstaller::install([
+	'url' => 'https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph',
+	'type' => 'snippet'
+]);
+```
+
+* If `ddTypograph` is not exist on your site, `ddInstaller` will just install it.
+* If `ddTypograph` is already exist on your site, `ddInstaller` will check it version and update it if needed.
+
+
+### Manually
 
 
 #### 1. Elements → Snippets: Create a new snippet with the following data
 
 1. Snippet name: `ddTypograph`.
-2. Description: `<b>2.5</b> Snippet for text typography. The snippet doesn’t use third-party services, also it sends no requests. In other words, everything is performed on your server.`.
+2. Description: `<b>2.6</b> Snippet for text typography. The snippet doesn’t use third-party services, also it sends no requests. In other words, everything is performed on your server.`.
 3. Category: `Core`.
 4. Parse DocBlock: `no`.
 5. Snippet code (php): Insert content of the `ddTypograph_snippet.php` file from the archive.
@@ -32,7 +54,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 2. Extract the archive to the folder (except `ddTypograph_snippet.php`).
 
 
-### Parameters description
+## Parameters description
 
 * `text`
 	* Desctription: Text to correct.
@@ -41,6 +63,24 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 	
 * `optAlign`
 	* Desctription: Optical alignment (hanging punctuation).
+	* Valid values:
+		* `0`
+		* `1`
+	* Default value: `0`
+	
+* `optAlign_useClasses`
+	* Desctription: Use CSS classes instead of inline styles for optical alignment (`<span class="oa_comma_b">` instead of `<span style="margin-right:-0.2em;">`).  
+		If the parameter is enabled, don't forget to specify the following CSS rules on your site:
+		```css
+		.oa_obracket_sp_s {margin-right:0.3em;}
+		.oa_obracket_sp_b {margin-left:-0.3em;}
+		.oa_obracket_nl_b {margin-left:-0.3em;}
+		.oa_comma_b {margin-right:-0.2em;}
+		.oa_comma_e {margin-left:0.2em;}
+		.oa_oquote_nl {margin-left:-0.44em;}
+		.oa_oqoute_sp_s {margin-right:0.44em;}
+		.oa_oqoute_sp_q {margin-left:-0.44em;}
+		```
 	* Valid values:
 		* `0`
 		* `1`
@@ -81,17 +121,17 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 	* Default value: `'notg,code'`
 
 
-### Examples
+## Examples
 
 
-#### Typography the content
+### Typography the content
 
 ```
 [[ddTypograph? &text=`[*content*]`]]
 ```
 
 
-#### Typography text with auto paragraphs, links & emails
+### Typography text with auto paragraphs, links & emails
 
 ```
 [[ddTypograph?
@@ -102,7 +142,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ```
 
 
-#### Typography text with auto optical margin alignment (hanging quotes & etc)
+### Typography text with auto optical margin alignment (hanging quotes & etc)
 
 ```
 [[ddTypograph?
@@ -112,7 +152,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ```
 
 
-#### Turn off typography for a text fragment (the `<notg></notg>` tag)
+### Turn off typography for a text fragment (the `<notg></notg>` tag)
 
 ```html
 [[ddTypograph?
@@ -121,7 +161,7 @@ The snippet doesn’t use third-party services, also it sends no requests. In ot
 ```
 
 
-#### Run the snippet through `\DDTools\Snippet::runSnippet` without DB and eval
+### Run the snippet through `\DDTools\Snippet::runSnippet` without DB and eval
 
 ```php
 \DDTools\Snippet::runSnippet([
@@ -150,9 +190,10 @@ Nothing you can sing that can’t be&nbsp;sung</p>
 
 ## Links
 
-* [Home page](https://code.divandesign.biz/modx/ddtypograph)
+* [Home page](https://code.divandesign.ru/modx/ddtypograph)
 * [Telegram chat](https://t.me/dd_code)
 * [Packagist](https://packagist.org/packages/dd/evolutioncms-snippets-ddtypograph)
+* [GitHub](https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph)
 
 
-<link rel="stylesheet" type="text/css" href="https://DivanDesign.ru/assets/files/ddMarkdown.css" />
+<link rel="stylesheet" type="text/css" href="https://raw.githack.com/DivanDesign/CSS.ddMarkdown/master/style.min.css" />
