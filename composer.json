@@ -22,6 +22,9 @@
 		"text typography"
 	],
 	"homepage": "https://code.divandesign.ru/modx/ddtypograph",
+	"support": {
+		"chat": "https://t.me/dd_code"
+	},
 	"authors": [
 		{
 			"name": "Ilyas Ronef",
