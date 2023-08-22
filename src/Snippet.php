@@ -3,7 +3,7 @@ namespace ddTypograph;
 
 class Snippet extends \DDTools\Snippet {
 	protected
-		$version = '2.6.0',
+		$version = '2.6.1',
 		
 		$params = [
 			//Defaults
@@ -54,7 +54,7 @@ class Snippet extends \DDTools\Snippet {
 	
 	/**
 	 * run
-	 * @version 1.1 (2023-08-22)
+	 * @version 1.2 (2023-08-23)
 	 * 
 	 * @return {string}
 	 */
@@ -70,6 +70,13 @@ class Snippet extends \DDTools\Snippet {
 			$result = str_replace(
 				'&#34;',
 				'"',
+				$result
+			);
+			
+			//Save &nbsp; in empty lines (it will be replaced back after EMT call)
+			$result = str_replace(
+				'<p>&nbsp;</p>',
+				'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
 				$result
 			);
 			
@@ -321,6 +328,13 @@ class Snippet extends \DDTools\Snippet {
 			
 			//Типографируем
 			$result = $ddTypograph->apply();
+			
+			//Clean back empty lines
+			$result = str_replace(
+				'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
+				'<p>&nbsp;</p>',
+				$result
+			);
 		}
 		
 		return $result;

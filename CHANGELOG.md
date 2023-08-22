@@ -1,6 +1,10 @@
 # (MODX)EvolutionCMS.snippets.ddTypograph changelog
 
 
+## Version 2.6.1 (2023-08-23)
+* \* TinyMCE empty lines (`<p>&nbsp;</p>`) are no longer modified.
+
+
 ## Version 2.6 (2023-08-22)
 * \+ Parameters → `optAlign_useClasses`: The new parameter. Allows to use CSS classes instead of inline styles for optical alignment (`<span class="oa_comma_b">` instead of `<span style="margin-right:-0.2em;">`).
 * \+ README:
