@@ -1,6 +1,10 @@
 # (MODX)EvolutionCMS.snippets.ddTypograph changelog
 
 
+## Version 2.7 (2024-07-07)
+* \+ You can turn off typography for a text fragment aslo by using the `<span class="notg"></span>` tag.
+
+
 ## Version 2.6.1 (2023-08-23)
 * \* TinyMCE empty lines (`<p>&nbsp;</p>`) are no longer modified.
 

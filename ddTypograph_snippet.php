@@ -1,13 +1,13 @@
 <?php
 /**
  * ddTypograph
- * @version 2.6.1 (2023-08-23)
+ * @version 2.7 (2024-07-07)
  * 
  * @see README.md
  * 
  * @link https://code.divandesign.ru/modx/ddtypograph
  * 
- * @copyright 2010–2023 Ronef {@link https://Ronef.ru }
+ * @copyright 2010–2024 Ronef {@link https://Ronef.ru }
  */
 
 //Include (MODX)EvolutionCMS.libraries.ddTools
