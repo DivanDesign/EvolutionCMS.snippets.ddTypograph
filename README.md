@@ -3,6 +3,8 @@
 Snippet for text typography.
 The snippet doesn’t use third-party services, also it sends no requests. In other words, everything is performed on your server.
 
+You can turn off typography for a text fragment using the `<notg></notg>` or `<span class="notg"></span>` tags.
+
 
 ## Requires
 
@@ -152,11 +154,11 @@ require_once(
 ```
 
 
-### Turn off typography for a text fragment (the `<notg></notg>` tag)
+### Turn off typography for a text fragment (the `<notg></notg>` or `<span class="notg"></span>` tags)
 
 ```html
 [[ddTypograph?
-	&text=`Some text. <notg>The snippet will not change this text inside the tag.</notg> It's easy.`
+	&text=`Some text. <notg>The snippet will not change this text inside the tag.</notg> It's easy. <span class="notg">Additionally, `span` with the single `notg` class is also supported.</span>`
 ]]
 ```
 

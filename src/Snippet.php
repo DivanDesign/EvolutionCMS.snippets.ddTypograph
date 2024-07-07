@@ -54,7 +54,7 @@ class Snippet extends \DDTools\Snippet {
 	
 	/**
 	 * run
-	 * @version 1.2 (2023-08-23)
+	 * @version 1.3 (2024-07-07)
 	 * 
 	 * @return {string}
 	 */
@@ -77,6 +77,12 @@ class Snippet extends \DDTools\Snippet {
 			$result = str_replace(
 				'<p>&nbsp;</p>',
 				'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
+				$result
+			);
+			//Support of <span class="notg"> (just replace to <notg>)
+			$result = preg_replace(
+				'/<span\sclass\="notg">(.+?)<\/span>/is',
+				'<notg>$1</notg>',
 				$result
 			);
 			
