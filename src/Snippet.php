@@ -3,7 +3,7 @@ namespace ddTypograph;
 
 class Snippet extends \DDTools\Snippet {
 	protected
-		$version = '2.6.1',
+		$version = '2.7.0',
 		
 		$params = [
 			//Defaults
@@ -34,6 +34,8 @@ class Snippet extends \DDTools\Snippet {
 		]
 	;
 	
+	private static $theEMT = null;
+	
 	/**
 	 * prepareParams
 	 * @version 1.0 (2021-03-29)
@@ -54,7 +56,7 @@ class Snippet extends \DDTools\Snippet {
 	
 	/**
 	 * run
-	 * @version 1.2 (2023-08-23)
+	 * @version 1.3.1 (2024-07-07)
 	 * 
 	 * @return {string}
 	 */
@@ -64,8 +66,6 @@ class Snippet extends \DDTools\Snippet {
 		
 		//Если есть что типографировать
 		if (strlen($result) > 4){
-			global $ddTypograph;
-			
 			//Заменим кавычки, вставленные через спец. символы на обычные (а то не обрабатываются в библиотеке)
 			$result = str_replace(
 				'&#34;',
@@ -79,9 +79,15 @@ class Snippet extends \DDTools\Snippet {
 				'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
 				$result
 			);
+			//Support of <span class="notg"> (just replace to <notg>)
+			$result = preg_replace(
+				'/<span\sclass\="notg">(.+?)<\/span>/is',
+				'<notg>$1</notg>',
+				$result
+			);
 			
-			if (!isset($ddTypograph)){
-				$ddTypograph = new \EMTypograph();
+			if (is_null(static::$theEMT)){
+				static::$theEMT = new \EMTypograph();
 			}
 			
 			//Safe tags
@@ -149,7 +155,7 @@ class Snippet extends \DDTools\Snippet {
 				'off'
 			;
 			
-			$ddTypograph->setup([
+			static::$theEMT->setup([
 				//Расстановка «кавычек-елочек» первого уровня
 				'Quote.quotes' => 'on',
 				//Внутренние кавычки-лапки
@@ -324,10 +330,10 @@ class Snippet extends \DDTools\Snippet {
 				'Etc.split_number_to_triads' => 'on'
 			]);
 			
-			$ddTypograph->set_text($result);
+			static::$theEMT->set_text($result);
 			
 			//Типографируем
-			$result = $ddTypograph->apply();
+			$result = static::$theEMT->apply();
 			
 			//Clean back empty lines
 			$result = str_replace(
