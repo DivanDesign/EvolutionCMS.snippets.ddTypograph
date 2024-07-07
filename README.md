@@ -59,19 +59,19 @@ require_once(
 ## Parameters description
 
 * `text`
-	* Desctription: Text to correct.
+	* Description: Text to correct.
 	* Valid values: `string`
 	* **Required**
 	
 * `optAlign`
-	* Desctription: Optical alignment (hanging punctuation).
+	* Description: Optical alignment (hanging punctuation).
 	* Valid values:
 		* `0`
 		* `1`
 	* Default value: `0`
 	
 * `optAlign_useClasses`
-	* Desctription: Use CSS classes instead of inline styles for optical alignment (`<span class="oa_comma_b">` instead of `<span style="margin-right:-0.2em;">`).  
+	* Description: Use CSS classes instead of inline styles for optical alignment (`<span class="oa_comma_b">` instead of `<span style="margin-right:-0.2em;">`).  
 		If the parameter is enabled, don't forget to specify the following CSS rules on your site:
 		```css
 		.oa_obracket_sp_s {margin-right:0.3em;}
@@ -89,28 +89,28 @@ require_once(
 	* Default value: `0`
 	
 * `text_paragraphs`
-	* Desctription: Section signs and line breaks insertion.
+	* Description: Section signs and line breaks insertion.
 	* Valid values:
 		* `0`
 		* `1`
 	* Default value: `0`
 	
 * `text_autoLinks`
-	* Desctription: Marking links (including email ones).
+	* Description: Marking links (including email ones).
 	* Valid values:
 		* `0`
 		* `1`
 	* Default value: `0`
 	
 * `etc_unicodeConvert`
-	* Desctription: Convert HTML entities into Unicode (`—` instead of `&mdash;`, etc).
+	* Description: Convert HTML entities into Unicode (`—` instead of `&mdash;`, etc).
 	* Valid values:
 		* `0`
 		* `1`
 	* Default value: `1`
 	
 * `noTags`
-	* Desctription: Whether HTML element insertion is allowed or not.  
+	* Description: Whether HTML element insertion is allowed or not.  
 		There are cases when using tags causes the text to be invalid, for example, using the snippet inside of an HTML attribute.
 	* Valid values:
 		* `0`
@@ -118,7 +118,7 @@ require_once(
 	* Default value: `0`
 	
 * `excludeTags`
-	* Desctription: HTML tags which content will be ignored by snippet.
+	* Description: HTML tags which content will be ignored by snippet.
 	* Valid values: `stringCommaSeparated`
 	* Default value: `'notg,code'`
 

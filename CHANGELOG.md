@@ -19,7 +19,7 @@
 * \* Attention! PHP >= 5.6 is required.
 * \* Attention! (MODX)EvolutionCMS.libraries.ddTools >= 0.48.1 is required.
 * \+ You can just call `\DDTools\Snippet::runSnippet` to run the snippet without DB and eval (see README → Examples).
-* \+ `\ddDomainComparator\Snippet`: The new class. All snippet code was moved here.
+* \+ `\ddTypograph\Snippet`: The new class. All snippet code was moved here.
 * \+ README → Links.
 * \* Composer.json:
 	* \+ `homepage`
