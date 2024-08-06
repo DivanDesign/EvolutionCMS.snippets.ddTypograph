@@ -21,16 +21,16 @@
 Просто вызовите следующий код в своих исходинках или модуле [Console](https://github.com/vanchelo/MODX-Evolution-Ajax-Console):
 
 ```php
-//Подключение (MODX)EvolutionCMS.libraries.ddInstaller
+// Подключение (MODX)EvolutionCMS.libraries.ddInstaller
 require_once(
-	$modx->getConfig('base_path') .
-	'assets/libs/ddInstaller/require.php'
+	$modx->getConfig('base_path')
+	. 'assets/libs/ddInstaller/require.php'
 );
 
-//Установка (MODX)EvolutionCMS.snippets.ddTypograph
+// Установка (MODX)EvolutionCMS.snippets.ddTypograph
 \DDInstaller::install([
 	'url' => 'https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph',
-	'type' => 'snippet'
+	'type' => 'snippet',
 ]);
 ```
 
@@ -176,8 +176,8 @@ require_once(
 			https://ru.wikipedia.org/wiki/The_Beatles
 		",
 		'text_paragraphs' => true,
-		'text_autoLinks' => true
-	]
+		'text_autoLinks' => true,
+	],
 ]);
 ```
 
