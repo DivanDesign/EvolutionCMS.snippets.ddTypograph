@@ -56,7 +56,7 @@ class Snippet extends \DDTools\Snippet {
 	
 	/**
 	 * run
-	 * @version 1.3.2 (2024-08-06)
+	 * @version 1.3.3 (2025-02-16)
 	 * 
 	 * @return {string}
 	 */
@@ -73,10 +73,15 @@ class Snippet extends \DDTools\Snippet {
 				$result
 			);
 			
-			// Save &nbsp; in empty lines (it will be replaced back after EMT call)
+			// It will be replaced back after EMT call
 			$result = str_replace(
-				'<p>&nbsp;</p>',
-				'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
+				[
+					// Save &nbsp; in empty lines
+					'<p>&nbsp;</p>',
+				],
+				[
+					'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
+				],
 				$result
 			);
 			// Support of <span class="notg"> (just replace to <notg>)
@@ -335,10 +340,14 @@ class Snippet extends \DDTools\Snippet {
 			// Типографируем
 			$result = static::$theEMT->apply();
 			
-			// Clean back empty lines
+			// Clean back
 			$result = str_replace(
-				'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
-				'<p>&nbsp;</p>',
+				[
+					'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
+				],
+				[
+					'<p>&nbsp;</p>',
+				],
 				$result
 			);
 		}
