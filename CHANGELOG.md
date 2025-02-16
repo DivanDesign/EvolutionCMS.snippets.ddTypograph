@@ -1,6 +1,11 @@
 # (MODX)EvolutionCMS.snippets.ddTypograph changelog
 
 
+## Version 2.7.1 (2025-02-16)
+
+* \* `×` (multiplication sign) is no longer replaced by `x` (the “ex” letter).
+
+
 ## Version 2.7 (2024-07-07)
 
 * \+ You can turn off typography for a text fragment aslo by using the `<span class="notg"></span>` tag.
