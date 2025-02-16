@@ -56,7 +56,7 @@ class Snippet extends \DDTools\Snippet {
 	
 	/**
 	 * run
-	 * @version 1.3.3 (2025-02-16)
+	 * @version 1.3.4 (2025-02-16)
 	 * 
 	 * @return {string}
 	 */
@@ -78,9 +78,12 @@ class Snippet extends \DDTools\Snippet {
 				[
 					// Save &nbsp; in empty lines
 					'<p>&nbsp;</p>',
+					// Prevent replacing of × by x
+					'×',
 				],
 				[
 					'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
+					'<span class="_notg_start"></span>×<span class="_notg_end"></span>',
 				],
 				$result
 			);
@@ -344,9 +347,11 @@ class Snippet extends \DDTools\Snippet {
 			$result = str_replace(
 				[
 					'<span class="_notg_start"></span><p>&nbsp;</p><span class="_notg_end"></span>',
+					'<span class="_notg_start"></span>×<span class="_notg_end"></span>',
 				],
 				[
 					'<p>&nbsp;</p>',
+					'×',
 				],
 				$result
 			);
