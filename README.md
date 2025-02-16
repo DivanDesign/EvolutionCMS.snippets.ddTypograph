@@ -21,16 +21,16 @@ You can turn off typography for a text fragment using the `<notg></notg>` or `<s
 Just run the following PHP code in your sources or [Console](https://github.com/vanchelo/MODX-Evolution-Ajax-Console):
 
 ```php
-//Include (MODX)EvolutionCMS.libraries.ddInstaller
+// Include (MODX)EvolutionCMS.libraries.ddInstaller
 require_once(
-	$modx->getConfig('base_path') .
-	'assets/libs/ddInstaller/require.php'
+	$modx->getConfig('base_path')
+	. 'assets/libs/ddInstaller/require.php'
 );
 
-//Install (MODX)EvolutionCMS.snippets.ddTypograph
+// Install (MODX)EvolutionCMS.snippets.ddTypograph
 \DDInstaller::install([
 	'url' => 'https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph',
-	'type' => 'snippet'
+	'type' => 'snippet',
 ]);
 ```
 
@@ -44,7 +44,7 @@ require_once(
 #### 1. Elements → Snippets: Create a new snippet with the following data
 
 1. Snippet name: `ddTypograph`.
-2. Description: `<b>2.7</b> Snippet for text typography. The snippet doesn’t use third-party services, also it sends no requests. In other words, everything is performed on your server.`.
+2. Description: `<b>2.7.1</b> Snippet for text typography. The snippet doesn’t use third-party services, also it sends no requests. In other words, everything is performed on your server.`.
 3. Category: `Core`.
 4. Parse DocBlock: `no`.
 5. Snippet code (php): Insert content of the `ddTypograph_snippet.php` file from the archive.
@@ -176,8 +176,8 @@ require_once(
 			https://en.wikipedia.org/wiki/The_Beatles
 		",
 		'text_paragraphs' => true,
-		'text_autoLinks' => true
-	]
+		'text_autoLinks' => true,
+	],
 ]);
 ```
 

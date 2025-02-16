@@ -21,16 +21,16 @@
 Просто вызовите следующий код в своих исходинках или модуле [Console](https://github.com/vanchelo/MODX-Evolution-Ajax-Console):
 
 ```php
-//Подключение (MODX)EvolutionCMS.libraries.ddInstaller
+// Подключение (MODX)EvolutionCMS.libraries.ddInstaller
 require_once(
-	$modx->getConfig('base_path') .
-	'assets/libs/ddInstaller/require.php'
+	$modx->getConfig('base_path')
+	. 'assets/libs/ddInstaller/require.php'
 );
 
-//Установка (MODX)EvolutionCMS.snippets.ddTypograph
+// Установка (MODX)EvolutionCMS.snippets.ddTypograph
 \DDInstaller::install([
 	'url' => 'https://github.com/DivanDesign/EvolutionCMS.snippets.ddTypograph',
-	'type' => 'snippet'
+	'type' => 'snippet',
 ]);
 ```
 
@@ -44,7 +44,7 @@ require_once(
 #### 1. Элементы → Сниппеты: Создайте новый сниппет со следующими параметрами
 
 1. Название сниппета: `ddTypograph`.
-2. Описание: `<b>2.7</b> Сниппет типографирует текст. Не использует сторонних сервисов, не отправляет никаких запросов, всё делается прямо у вас на сервере.`.
+2. Описание: `<b>2.7.1</b> Сниппет типографирует текст. Не использует сторонних сервисов, не отправляет никаких запросов, всё делается прямо у вас на сервере.`.
 3. Категория: `Core`.
 4. Анализировать DocBlock: `no`.
 5. Код сниппета (php): Вставьте содержимое файла `ddTypograph_snippet.php` из архива.
@@ -176,8 +176,8 @@ require_once(
 			https://ru.wikipedia.org/wiki/The_Beatles
 		",
 		'text_paragraphs' => true,
-		'text_autoLinks' => true
-	]
+		'text_autoLinks' => true,
+	],
 ]);
 ```
 

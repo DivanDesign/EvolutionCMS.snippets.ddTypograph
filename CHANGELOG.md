@@ -1,15 +1,23 @@
 # (MODX)EvolutionCMS.snippets.ddTypograph changelog
 
 
+## Version 2.7.1 (2025-02-16)
+
+* \* `×` (multiplication sign) is no longer replaced by `x` (the “ex” letter).
+
+
 ## Version 2.7 (2024-07-07)
+
 * \+ You can turn off typography for a text fragment aslo by using the `<span class="notg"></span>` tag.
 
 
 ## Version 2.6.1 (2023-08-23)
+
 * \* TinyMCE empty lines (`<p>&nbsp;</p>`) are no longer modified.
 
 
 ## Version 2.6 (2023-08-22)
+
 * \+ Parameters → `optAlign_useClasses`: The new parameter. Allows to use CSS classes instead of inline styles for optical alignment (`<span class="oa_comma_b">` instead of `<span style="margin-right:-0.2em;">`).
 * \+ README:
 	* \+ Installation → Using (MODX)EvolutionCMS.libraries.ddInstaller.
@@ -20,6 +28,7 @@
 
 
 ## Version 2.5 (2021-03-29)
+
 * \* Attention! PHP >= 5.6 is required.
 * \* Attention! (MODX)EvolutionCMS.libraries.ddTools >= 0.48.1 is required.
 * \+ You can just call `\DDTools\Snippet::runSnippet` to run the snippet without DB and eval (see README → Examples).
@@ -32,11 +41,13 @@
 
 
 ## Version 2.4.2 (2020-05-06)
+
 * \* Attention! (MODX)EvolutionCMS.libraries.ddTools >= 0.32 is required.
 * \* Compatibility with (MODX)EvolutionCMS.libraries.ddTools >= 0.32.
 
 
 ## Version 2.4.1 (2020-05-04)
+
 * \+ README.
 * \+ README_ru.
 * \+ CHANGELOG.
@@ -46,6 +57,7 @@
 
 
 ## Version 2.4 (2017-12-09)
+
 * \* Attention! PHP >= 5.4 is required.
 * \* Attention! (MODX)EvolutionCMS.libraries.ddTools >= 0.21 is required.
 * \+ Added an ability to exlude HTML tags from snippet processing (see the `excludeTags` parameter).
@@ -54,6 +66,7 @@
 
 
 ## Version 2.3 (2015-08-24)
+
 * \* PHP.libraries.EMT has been updated to 3.5:
 	* \+ Unicode support has been added. At last!
 	* \+ The `+X (XXX)XXXXXXX` phone format is now supported. Phones matching this pattern will be rewritten as `+X XXX XXX-XX-XX`.
@@ -70,6 +83,7 @@
 
 
 ## Version 2.2 (2014-05-25)
+
 * \* Attention! (MODX)EvolutionCMS.libraries.ddTools >= 0.12 is required.
 * \* PHP.libraries.EMT has been updated to 3.3:
 	* \* The period placement rule has been improved.
@@ -86,18 +100,22 @@
 
 
 ## Version 2.1 (2014-04-16)
+
 * \+ The `Nobr_hyphenNowrap` parameter, allowing hyphenated words to be rendered in nowrap mode, has been added.
 
 
 ## Version 2.0.2b (2014-03-26)
+
 * \* The `else` statement was added in the string length check to prevent returning void. The snippet now returns the same passed string if its length is less than four symbols.
 
 
 ## Version 2.0.1b (2014-02-25)
+
 * \* The path to PHP.libraries.EMT has been fixed.
 
 
 ## Version 2.0b (2014-02-21)
+
 * \* PHP.libraries.EMT 3.2 is used.
 * \- The following parameters have been removed:
 	* \- `disableTof`.
@@ -111,18 +129,22 @@
 
 
 ## Version 1.4.3 (2013-05-28)
+
 * \* Tiny bugfix.
 
 
 ## Version 1.4.2 (2013-04-05)
+
 * \* Bugfix for PHP 5.3 (files `/assets/snippets/ddtypograph/Jare/Typograph.php` & `/assets/snippets/ddtypograph/Jare/Typograph/Tof.php`).
 
 
 ## Version 1.4.1 (2013-03-06)
+
 * \+ Parsing of `&#34;` is now correct.
 
 
 ## Version 1.4 (2010-10-10)
+
 * \+ Added disabling base-params for tofs.
 
 
